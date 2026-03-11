@@ -768,6 +768,10 @@ function renderTable(rows) {
     .join("");
 }
 
+function updateStatus(text) {
+  elements.statusPill.textContent = text;
+}
+
 function average(values) {
   const finiteValues = values.filter((value) => Number.isFinite(value));
   if (!finiteValues.length) {
