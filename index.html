@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delaware Student Outcomes Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <div class="status-row">
+            <p class="eyebrow">Delaware Public Education Dashboard</p>
+            <span class="status-pill" id="statusPill">Initializing</span>
+          </div>
+          <h1>Attendance, achievement, and educator mobility in one comparison view.</h1>
+          <p class="hero-copy">
+            This dashboard is built to overlay student attendance, student achievement, and
+            educator mobility for Red Clay, Brandywine, Christina, and Delaware charter schools.
+            Once you provide the three API links, the adapter layer can be pointed at the live
+            data sources without changing the UI.
+          </p>
+        </div>
+        <div class="hero-card">
+          <p class="hero-card-label">Current slice</p>
+          <p class="hero-card-value" id="heroFocus">Loading data...</p>
+          <p class="hero-card-detail" id="heroDetail"></p>
+          <p class="hero-card-note" id="heroNote"></p>
+        </div>
+      </header>
+
+      <main class="dashboard">
+        <section class="panel controls-panel">
+          <div class="panel-heading">
+            <h2>Filters</h2>
+            <button id="resetFilters" class="ghost-button" type="button">Reset</button>
+          </div>
+          <div class="controls-grid">
+            <label>
+              School year
+              <select id="yearFilter"></select>
+            </label>
+            <label>
+              Geography group
+              <select id="groupFilter"></select>
+            </label>
+            <label>
+              Organization
+              <select id="organizationFilter"></select>
+            </label>
+            <label>
+              Assessment
+              <select id="assessmentFilter"></select>
+            </label>
+            <label>
+              Content area
+              <select id="contentFilter"></select>
+            </label>
+            <label>
+              Grade
+              <select id="gradeFilter"></select>
+            </label>
+            <label>
+              Race
+              <select id="raceFilter"></select>
+            </label>
+            <label>
+              Gender
+              <select id="genderFilter"></select>
+            </label>
+            <label>
+              Student program
+              <select id="specialDemoFilter"></select>
+            </label>
+            <label>
+              Geography
+              <select id="geographyFilter"></select>
+            </label>
+            <label>
+              Metric view
+              <select id="metricFilter"></select>
+            </label>
+          </div>
+        </section>
+
+        <section class="kpi-grid">
+          <article class="panel kpi">
+            <span class="kpi-label">Achievement</span>
+            <strong class="kpi-value" id="achievementValue">--</strong>
+            <span class="kpi-footnote" id="achievementNote">No data</span>
+          </article>
+          <article class="panel kpi">
+            <span class="kpi-label">Attendance</span>
+            <strong class="kpi-value" id="attendanceValue">--</strong>
+            <span class="kpi-footnote" id="attendanceNote">No data</span>
+          </article>
+          <article class="panel kpi">
+            <span class="kpi-label">Educator mobility</span>
+            <strong class="kpi-value" id="mobilityValue">--</strong>
+            <span class="kpi-footnote" id="mobilityNote">No data</span>
+          </article>
+          <article class="panel kpi">
+            <span class="kpi-label">Organizations in view</span>
+            <strong class="kpi-value" id="coverageValue">--</strong>
+            <span class="kpi-footnote" id="coverageNote">No data</span>
+          </article>
+        </section>
+
+        <section class="viz-grid">
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <h2>Overlay scatter</h2>
+              <p id="scatterCaption">Achievement aligned to attendance and educator mobility.</p>
+            </div>
+            <div class="chart-wrap">
+              <svg id="scatterChart" viewBox="0 0 760 420" aria-label="Scatter chart"></svg>
+            </div>
+          </article>
+
+          <article class="panel chart-panel">
+            <div class="panel-heading">
+              <h2>Organization comparison</h2>
+              <p id="comparisonCaption">Side-by-side view for the selected metric.</p>
+            </div>
+            <div class="chart-wrap">
+              <svg id="comparisonChart" viewBox="0 0 760 420" aria-label="Comparison chart"></svg>
+            </div>
+          </article>
+
+          <article class="panel chart-panel full-width">
+            <div class="panel-heading">
+              <h2>Trend by organization</h2>
+              <p id="trendCaption">Multi-year movement for the selected organization.</p>
+            </div>
+            <div class="chart-wrap">
+              <svg id="trendChart" viewBox="0 0 1100 360" aria-label="Trend chart"></svg>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel insights-panel">
+          <div class="panel-heading">
+            <h2>What stands out</h2>
+          </div>
+          <ul id="insightsList" class="insights-list"></ul>
+        </section>
+
+        <section class="panel table-panel">
+          <div class="panel-heading">
+            <h2>Merged comparison rows</h2>
+            <p id="tableCaption">Each row combines achievement, attendance, and mobility.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Group</th>
+                  <th>Organization</th>
+                  <th>Assessment</th>
+                  <th>Subject</th>
+                  <th>Grade</th>
+                  <th>Race</th>
+                  <th>Gender</th>
+                  <th>Program</th>
+                  <th>Student group</th>
+                  <th>Achievement</th>
+                  <th>Attendance</th>
+                  <th>Mobility</th>
+                </tr>
+              </thead>
+              <tbody id="dataTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./config.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

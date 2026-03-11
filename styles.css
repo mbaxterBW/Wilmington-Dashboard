@@ -1,0 +1,290 @@
+:root {
+  --bg: #f6f1e8;
+  --bg-deep: #eadfcd;
+  --panel: rgba(255, 252, 246, 0.9);
+  --panel-strong: #fffdf8;
+  --ink: #16212b;
+  --muted: #5d6775;
+  --line: rgba(22, 33, 43, 0.12);
+  --shadow: 0 20px 50px rgba(35, 42, 52, 0.12);
+  --district: #1b4965;
+  --charter: #9c6644;
+  --achievement: #1b4965;
+  --attendance: #6a994e;
+  --mobility: #bc4749;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(27, 73, 101, 0.12), transparent 32%),
+    radial-gradient(circle at 88% 10%, rgba(156, 102, 68, 0.1), transparent 18%),
+    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg) 28%, #f9f6ef 100%);
+}
+
+button,
+select {
+  font: inherit;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.page-shell {
+  width: min(1380px, calc(100% - 28px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  gap: 22px;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.status-row,
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.eyebrow,
+.status-pill,
+.hero-card-label {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--achievement);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(27, 73, 101, 0.12);
+  color: var(--achievement);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+}
+
+h1 {
+  max-width: 12ch;
+  margin-top: 10px;
+  font-size: clamp(2.9rem, 5vw, 5.3rem);
+  line-height: 0.94;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.hero-copy,
+.hero-card-detail,
+.hero-card-note,
+.panel-heading p,
+.kpi-footnote,
+label,
+th,
+.insights-list,
+.axis-label,
+.legend-label,
+.bar-label,
+.empty-label {
+  color: var(--muted);
+}
+
+.hero-copy {
+  max-width: 72ch;
+  margin: 16px 0 0;
+  line-height: 1.65;
+}
+
+.panel,
+.hero-card {
+  backdrop-filter: blur(12px);
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-card,
+.controls-panel,
+.chart-panel,
+.insights-panel,
+.table-panel,
+.kpi {
+  padding: 22px;
+}
+
+.hero-card-label {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  color: var(--mobility);
+}
+
+.hero-card-value {
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.hero-card-detail,
+.hero-card-note {
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.dashboard,
+.controls-grid,
+.kpi-grid,
+.viz-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.controls-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--ink);
+}
+
+.ghost-button {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.kpi-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.kpi-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.kpi-value {
+  display: block;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1;
+}
+
+.viz-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.chart-wrap {
+  overflow-x: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+}
+
+.bar-value {
+  font-size: 0.8rem;
+  fill: var(--ink);
+  font-weight: 700;
+}
+
+.bar-label,
+.axis-label,
+.legend-label,
+.empty-label {
+  font-size: 0.8rem;
+}
+
+.insights-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1380px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+thead th {
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+tbody td {
+  font-size: 0.94rem;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .viz-grid,
+  .controls-grid,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

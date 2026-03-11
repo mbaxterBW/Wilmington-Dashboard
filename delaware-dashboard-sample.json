@@ -1,0 +1,29 @@
+{
+  "rows": [
+    { "year": "2024", "group": "District", "organization": "Red Clay Consolidated School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 44.2, "attendanceRate": 91.8, "educatorMobilityRate": 11.6 },
+    { "year": "2023", "group": "District", "organization": "Red Clay Consolidated School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 42.9, "attendanceRate": 91.1, "educatorMobilityRate": 12.4 },
+    { "year": "2022", "group": "District", "organization": "Red Clay Consolidated School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 40.1, "attendanceRate": 90.3, "educatorMobilityRate": 13.0 },
+    { "year": "2024", "group": "District", "organization": "Brandywine School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 49.5, "attendanceRate": 93.1, "educatorMobilityRate": 9.2 },
+    { "year": "2023", "group": "District", "organization": "Brandywine School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 47.8, "attendanceRate": 92.5, "educatorMobilityRate": 10.4 },
+    { "year": "2022", "group": "District", "organization": "Brandywine School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 45.2, "attendanceRate": 91.6, "educatorMobilityRate": 11.1 },
+    { "year": "2024", "group": "District", "organization": "Christina School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 31.7, "attendanceRate": 88.7, "educatorMobilityRate": 15.2 },
+    { "year": "2023", "group": "District", "organization": "Christina School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 29.9, "attendanceRate": 88.1, "educatorMobilityRate": 16.1 },
+    { "year": "2022", "group": "District", "organization": "Christina School District", "subject": "ELA", "studentGroup": "All students", "achievementRate": 28.4, "attendanceRate": 87.4, "educatorMobilityRate": 17.0 },
+    { "year": "2024", "group": "Charter Schools", "organization": "First State Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 53.1, "attendanceRate": 94.0, "educatorMobilityRate": 8.4 },
+    { "year": "2023", "group": "Charter Schools", "organization": "First State Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 51.0, "attendanceRate": 93.4, "educatorMobilityRate": 9.1 },
+    { "year": "2022", "group": "Charter Schools", "organization": "First State Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 49.3, "attendanceRate": 92.6, "educatorMobilityRate": 10.2 },
+    { "year": "2024", "group": "Charter Schools", "organization": "Providence Creek Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 58.4, "attendanceRate": 95.2, "educatorMobilityRate": 7.1 },
+    { "year": "2023", "group": "Charter Schools", "organization": "Providence Creek Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 56.1, "attendanceRate": 94.7, "educatorMobilityRate": 7.9 },
+    { "year": "2022", "group": "Charter Schools", "organization": "Providence Creek Charter School", "subject": "ELA", "studentGroup": "All students", "achievementRate": 54.8, "attendanceRate": 93.8, "educatorMobilityRate": 8.3 },
+    { "year": "2024", "group": "District", "organization": "Red Clay Consolidated School District", "subject": "Math", "studentGroup": "All students", "achievementRate": 39.8, "attendanceRate": 91.8, "educatorMobilityRate": 11.6 },
+    { "year": "2024", "group": "District", "organization": "Brandywine School District", "subject": "Math", "studentGroup": "All students", "achievementRate": 46.9, "attendanceRate": 93.1, "educatorMobilityRate": 9.2 },
+    { "year": "2024", "group": "District", "organization": "Christina School District", "subject": "Math", "studentGroup": "All students", "achievementRate": 27.3, "attendanceRate": 88.7, "educatorMobilityRate": 15.2 },
+    { "year": "2024", "group": "Charter Schools", "organization": "First State Charter School", "subject": "Math", "studentGroup": "All students", "achievementRate": 49.6, "attendanceRate": 94.0, "educatorMobilityRate": 8.4 },
+    { "year": "2024", "group": "Charter Schools", "organization": "Providence Creek Charter School", "subject": "Math", "studentGroup": "All students", "achievementRate": 55.7, "attendanceRate": 95.2, "educatorMobilityRate": 7.1 },
+    { "year": "2024", "group": "District", "organization": "Red Clay Consolidated School District", "subject": "ELA", "studentGroup": "Low income", "achievementRate": 28.6, "attendanceRate": 88.9, "educatorMobilityRate": 11.6 },
+    { "year": "2024", "group": "District", "organization": "Brandywine School District", "subject": "ELA", "studentGroup": "Low income", "achievementRate": 35.7, "attendanceRate": 90.8, "educatorMobilityRate": 9.2 },
+    { "year": "2024", "group": "District", "organization": "Christina School District", "subject": "ELA", "studentGroup": "Low income", "achievementRate": 22.4, "attendanceRate": 85.3, "educatorMobilityRate": 15.2 },
+    { "year": "2024", "group": "Charter Schools", "organization": "First State Charter School", "subject": "ELA", "studentGroup": "Low income", "achievementRate": 41.2, "attendanceRate": 91.5, "educatorMobilityRate": 8.4 },
+    { "year": "2024", "group": "Charter Schools", "organization": "Providence Creek Charter School", "subject": "ELA", "studentGroup": "Low income", "achievementRate": 47.9, "attendanceRate": 92.8, "educatorMobilityRate": 7.1 }
+  ]
+}
