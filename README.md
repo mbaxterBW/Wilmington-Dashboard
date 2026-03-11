@@ -50,6 +50,7 @@ If the live Delaware APIs block browser requests from GitHub Pages, the page wil
 - `config.js` controls the live API endpoints and dashboard scope.
 - `data/delaware-dashboard-sample.json` is the local fallback dataset.
 - `app.js` paginates Socrata data with `$limit` and `$offset`.
+- The live queries are server-filtered to district codes `31`, `32`, `33`, plus Delaware charter LEAs (`districtcode >= 9000`) so the browser is not forced to download the full statewide datasets.
 - Achievement rows are the base dataset.
 - Attendance joins on `year + organization + race + gender + grade + specialdemo + geography`.
 - Mobility joins on `year + organization`.
